@@ -30,19 +30,21 @@ function adicionaContato() {
 
     var novoNome = document.querySelector("#nome").value;
     var novoNumero = document.querySelector("#numero").value;
-    var novo = {
-        id: cont,
-        nome: novoNome,
-        numero: novoNumero
-    };
-    contatos.push(novo);
-    console.log(contatos);
+    if(novoNome != '' && novoNumero != '') {
+      var novo = {
+          id: cont,
+          nome: novoNome,
+          numero: novoNumero
+      };
+      contatos.push(novo);
+      console.log(contatos);
 
-    criaDiv(novo.id,novo.nome,novo.numero);
+      criaDiv(novo.id,novo.nome,novo.numero);
 
-    campoNome.value = '';
-    campoNumero.value = '';
-    cont++;
+      campoNome.value = '';
+      campoNumero.value = '';
+      cont++;
+  }
 }
 
 function listarContatos() {
