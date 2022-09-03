@@ -8,19 +8,36 @@
         <title>Agenda Eletrônica</title>
     </head>
     <body>
-        <div id="conteudo">
-            <div>
-                <input class="busca" type="text" placeholder="Digite o nome do contato...">
-                <button class="button"> Buscar </button>
-            </div>
-            <div id="lista">
-                <div class="contato">
-
+        <div id="container">
+            <div id="conteudo">
+                <div>
+                    <input id="busca" type="text" placeholder="Digite o nome do contato...">
+                    <button class="button" onclick="buscarContato()"> Buscar </button>
                 </div>
-                Listar
+                <div id="lista">
+                    
+                </div>
             </div>
-            
-            <a class="button" href="adiciona.html"> Adicionar contato </a>
+    
+            <div id="lateral">
+                <div id="formulario">
+                    <h1>Adicionando um contato</h1>
+                    <input id="nome" placeholder="Nome" type="text" class="input" required="">
+                    <input id="numero" placeholder="Número" type="number" class="input" required="">
+                    <a class="button" onclick="adicionaContato()">Adicionar</a>
+                </div>
+    
+                <div id="detalhes">
+                    <h1>Detalhes do contato</h1>
+                    <input id="idContato" placeholder="ID" style="width: 10%" type="text" class="input" required="" disabled>
+                    <input id="nomeEdita" placeholder="Nome" type="text" class="input" required="">
+                    <input id="numeroEdita" placeholder="Número" type="text" class="input" required="">
+                    <div class="opcoes">
+                        <button class="button" onclick="removeContato()">Remover</button>
+                        <button class="button" onclick="editaContato()">Salvar</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <footer>
@@ -34,5 +51,8 @@
                 </div>
             </div>
         </footer>
+
+        
+        <script src="script.js"></script>
     </body>
 </html>
