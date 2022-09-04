@@ -98,10 +98,10 @@ function editaContato() {
 }
 
 function removeContato() {
-    var campoiD = document.querySelector("#idContato").value;
-    var campoNome = document.querySelector("#nomeEdita").value;
-    var campoNumero = document.querySelector("#numeroEdita").value;
-    var i = procuraContato(campoiD);
+    var campoiD = document.querySelector("#idContato");
+    var campoNome = document.querySelector("#nomeEdita");
+    var campoNumero = document.querySelector("#numeroEdita");
+    var i = procuraContato(campoiD.value);
     contatos.splice(i,1);
 
     console.log(contatos);
@@ -140,4 +140,17 @@ function buscarContato() {
     } else {
         listarContatos();
     }
+}
+
+function limpaCampos() {
+    var divDetalhe = document.getElementById("detalhes");
+    divDetalhe.style.border = "none";
+
+    var campoiD = document.querySelector("#idContato");
+    var campoNome = document.querySelector("#nomeEdita");
+    var campoNumero = document.querySelector("#numeroEdita");
+
+    campoiD.value = '';
+    campoNome.value = '';
+    campoNumero.value = '';
 }
