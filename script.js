@@ -101,9 +101,7 @@ function removeContato() {
     var campoiD = document.querySelector("#idContato").value;
     var campoNome = document.querySelector("#nomeEdita").value;
     var campoNumero = document.querySelector("#numeroEdita").value;
-    alert(campoiD);
     var i = procuraContato(campoiD);
-    alert(i);
     contatos.splice(i,1);
 
     console.log(contatos);
